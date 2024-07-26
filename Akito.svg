@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#302b63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#24243e;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- アニメーションされた背景 -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)">
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="10s" repeatCount="indefinite" />
+  </rect>
+  
+  <!-- 動く粒子効果 -->
+  <g id="particles">
+    <circle cx="100" cy="100" r="2" fill="#ffffff">
+      <animate attributeName="cy" from="0" to="800" dur="10s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="300" cy="200" r="1.5" fill="#ffffff">
+      <animate attributeName="cy" from="0" to="800" dur="15s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="500" cy="300" r="2.5" fill="#ffffff">
+      <animate attributeName="cy" from="0" to="800" dur="12s" repeatCount="indefinite" />
+    </circle>
+    <!-- 他の粒子も同様に追加 -->
+  </g>
+  
+  <!-- ヘッダー -->
+  <rect x="0" y="0" width="1200" height="100" fill="rgba(16, 21, 62, 0.8)"/>
+  <text x="50" y="65" font-family="Arial, sans-serif" font-size="40" fill="#e94560" filter="url(#glow)">岡部明人</text>
+  <text x="900" y="65" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">ホーム</text>
+  <text x="1000" y="65" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">作品</text>
+  <text x="1100" y="65" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">コンタクト</text>
+  
+  <!-- メインビジュアル -->
+  <image href="/api/placeholder/1000/400" x="100" y="120" width="1000" height="400">
+    <animate attributeName="opacity" values="0;1" dur="2s" />
+  </image>
+  <rect x="100" y="420" width="1000" height="100" fill="rgba(22, 33, 62, 0.7)"/>
+  <text x="120" y="485" font-family="Arial, sans-serif" font-size="48" fill="#ffffff" filter="url(#glow)">
+    革新的ゲームの世界へようこそ
+    <animate attributeName="opacity" values="0;1" dur="3s" />
+  </text>
+  
+  <!-- 特徴セクション（ホバー効果付き） -->
+  <g id="feature1">
+    <rect x="100" y="540" width="300" height="200" rx="10" ry="10" fill="#0f3460">
+      <animate attributeName="fill" to="#e94560" dur="0.3s" begin="feature1.mouseover" fill="freeze"/>
+      <animate attributeName="fill" to="#0f3460" dur="0.3s" begin="feature1.mouseout" fill="freeze"/>
+    </rect>
+    <text x="120" y="580" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">独創的なストーリー</text>
+    <text x="120" y="620" font-family="Arial, sans-serif" font-size="16" fill="#cccccc">プレイヤーを魅了する物語</text>
+  </g>
+  
+  <g id="feature2">
+    <rect x="450" y="540" width="300" height="200" rx="10" ry="10" fill="#0f3460">
+      <animate attributeName="fill" to="#e94560" dur="0.3s" begin="feature2.mouseover" fill="freeze"/>
+      <animate attributeName="fill" to="#0f3460" dur="0.3s" begin="feature2.mouseout" fill="freeze"/>
+    </rect>
+    <text x="470" y="580" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">革新的なゲームシステム</text>
+    <text x="470" y="620" font-family="Arial, sans-serif" font-size="16" fill="#cccccc">新しい遊び方の提案</text>
+  </g>
+  
+  <g id="feature3">
+    <rect x="800" y="540" width="300" height="200" rx="10" ry="10" fill="#0f3460">
+      <animate attributeName="fill" to="#e94560" dur="0.3s" begin="feature3.mouseover" fill="freeze"/>
+      <animate attributeName="fill" to="#0f3460" dur="0.3s" begin="feature3.mouseout" fill="freeze"/>
+    </rect>
+    <text x="820" y="580" font-family="Arial, sans-serif" font-size="24" fill="#ffffff">美しいビジュアル</text>
+    <text x="820" y="620" font-family="Arial, sans-serif" font-size="16" fill="#cccccc">没入感のある世界観</text>
+  </g>
+  
+  <!-- SNSアイコン -->
+  <g id="sns-icons">
+    <circle cx="1050" y="750" r="20" fill="#1DA1F2"/>
+    <text x="1050" y="758" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle">T</text>
+    <circle cx="1100" y="750" r="20" fill="#4267B2"/>
+    <text x="1100" y="758" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle">f</text>
+    <circle cx="1150" y="750" r="20" fill="#E4405F"/>
+    <text x="1150" y="758" font-family="Arial, sans-serif" font-size="24" fill="#ffffff" text-anchor="middle">I</text>
+  </g>
+  
+  <!-- フッター -->
+  <rect x="0" y="760" width="1200" height="40" fill="rgba(16, 21, 62, 0.8)"/>
+  <text x="500" y="785" font-family="Arial, sans-serif" font-size="16" fill="#ffffff">© 2024 岡部明人 All Rights Reserved.</text>
+</svg>
